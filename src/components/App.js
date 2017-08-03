@@ -6,7 +6,7 @@ class App extends React.Component{
       <div>
         <h1>Nexflix Movies!</h1>
         <MoviesTable/>
-      </div>
+      </div> 
     );
   }
 }

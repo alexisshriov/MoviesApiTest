@@ -15,3 +15,4 @@ class MovieRow extends React.Component{
   }
 }
 export default MovieRow;
+ 

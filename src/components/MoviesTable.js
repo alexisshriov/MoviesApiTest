@@ -15,7 +15,7 @@ class MoviesTable extends React.Component{
           <MovieRow title="title1" year="1991"/>
           <MovieRow title="title2" year="1992"/>
         </tbody>
-      </table>
+      </table> 
     );
   }
 }

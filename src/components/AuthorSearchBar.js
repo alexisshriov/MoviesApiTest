@@ -7,3 +7,4 @@ class AuthorSearchBar extends React.Component{
     );
   }
 }
+ 
