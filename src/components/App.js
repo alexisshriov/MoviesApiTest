@@ -1,8 +1,12 @@
 import React from 'react';
+import MoviesTable from './MoviesTable';
 class App extends React.Component{
   render(){
     return(
-      <h1>Hello World!</h1>
+      <div>
+        <h1>Nexflix Movies!</h1>
+        <MoviesTable/>
+      </div>
     );
   }
 }
