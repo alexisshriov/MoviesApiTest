@@ -3,6 +3,14 @@ import MovieRow from './MovieRow';
 import {connect} from 'react-redux';
 
 class MoviesTable extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {author: ""}
+  }
+
+ movieRow(movie, index){
+   return <MovieRow title = {movie.show_title} year = {movie.release_year} category= {movie.category} rating={movie.rating}/>;
+ }
   render(){
     return(
         <table>
@@ -10,24 +18,16 @@ class MoviesTable extends React.Component{
             <tr>
               <th>Title</th>
               <th>Year</th>
+              <th>Category</th>
+              <th>Rating</th>
             </tr>
           </thead>
         <tbody>
-          <MovieRow title="title1" year="1991"/>
-          <MovieRow title="title2" year="1992"/>
+          {this.props.movies.map(this.movieRow)}
         </tbody>
       </table>
     );
   }
 }
 
-function mapStateToProps(state, ownProps){
-  return{
-    movies: state.movies
-  };
-}
-function mapDispatchToProps(){
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MoviesTable);
+export default MoviesTable

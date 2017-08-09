@@ -3,5 +3,5 @@ import {Route, IndexRoute} from 'react-router';
 import App from './components/App';
 
 export default(
-  <Route path="/" Component = {App} />
+  <Route path="/" component = {App}/>
 );

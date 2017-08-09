@@ -8,16 +8,16 @@ import routes from './routes';
 import {Router, browserHistory} from 'react-router';
 import { Provider } from 'react-redux';
 
+
+
+
 const store = configureStore();
 
 render(
-  <div>
-    <p>hola</p>
-    <App/>
-    <Provider store = {store}>
-      <Router history={browserHistory} routes = {routes} />
-    </Provider>
-  </div>
-  ,
+
+  <Provider store = {store}>
+    <Router history={browserHistory} routes = {routes} />
+  </Provider>
+,
   document.getElementById('app')
 );
