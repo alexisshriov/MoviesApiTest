@@ -8,9 +8,6 @@ import routes from './routes';
 import {Router, browserHistory} from 'react-router';
 import { Provider } from 'react-redux';
 
-
-
-
 const store = configureStore();
 
 render(

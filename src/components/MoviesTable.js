@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieRow from './MovieRow';
+import MovieProfile from './MovieProfile';
 import {connect} from 'react-redux';
 
 class MoviesTable extends React.Component{
@@ -8,24 +8,22 @@ class MoviesTable extends React.Component{
     this.state = {author: ""}
   }
 
- movieRow(movie, index){
-   return <MovieRow title = {movie.show_title} year = {movie.release_year} category= {movie.category} rating={movie.rating}/>;
+ movieProfiles(movie, index){
+   return <MovieProfile
+             title = {movie.show_title}
+             director = {movie.director}
+             year = {movie.release_year}
+             category = {movie.category}
+             rating = {movie.rating}
+             poster = {movie.poster}
+             summary = {movie.summary}
+          />;
  }
   render(){
     return(
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Year</th>
-              <th>Category</th>
-              <th>Rating</th>
-            </tr>
-          </thead>
-        <tbody>
-          {this.props.movies.map(this.movieRow)}
-        </tbody>
-      </table>
+       <div>
+          {this.props.movies.map(this.movieProfiles)}
+       </div>
     );
   }
 }
